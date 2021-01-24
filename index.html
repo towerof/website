@@ -12,9 +12,9 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid align-middle">
-            <a class="navbar-brand" href="#default"><strong>AVENUE </strong>FASHION</a>
+            <a class="navbar-brand" href="#default" onclick="indexRedirect()"><strong>AVENUE </strong>FASHION</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -26,19 +26,13 @@
                     <li><a class="nav-link" href="#page_local">LOCAL STORES</a></li>
                     <li><a class="nav-link" href="#page_book">LOOK BOOK</a></li>
                     <li class="navbar-nav-hover"><a class="nav-link" href="#page_cart">Cart &nbsp<i class="fas fa-shopping-cart"></i></a> </li>
-                    <li><input type="search" class="navbar-nav-search form-control" name="search" placeholder="Search..."></li>
+                    <li><input type="search" class="navbar-nav-search form-control" name="search" placeholder="Search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'"></li>
                 </ul>
             </div>
-        </div>
         </div>
     </nav>
     <!--- Image Slider -->
     <div id="slides" class="carousel slide" data-ride="carousel">
-        <ul class="carousel-indicators">
-            <li data-target="#slides" data-slide-to="0"></li>
-            <li data-target="#slides" data-slide-to="1"></li>
-            <li data-target="#slides" data-slide-to="2"></li>
-        </ul>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="photo.png">
@@ -51,27 +45,54 @@
                 <img src="photo1.png">
                 <div class="carousel-caption">
                     <h1 class="carousel-heading1 carousel-inner-join display-2">JOIN US TODAY!</h1>
-                    <button type="button" class="carousel-button1 btn btn-lg ">Register</button>
+                    <button type="button" class="carousel-button1 btn btn-lg " onclick="createRedirect()">Register</button>
                 </div>
             </div>
             <div class=" carousel-item ">
                 <img src="photo2.png">
                 <div class="carousel-caption">
                     <h1 class="carousel-heading2 carousel-inner-already display-2">ALREADY REGISTER? </h1>
-                    <button type="button" class="carousel-button2 btn btn-lg ">Sing in</button>
+                    <button type="button" class="carousel-button2 btn btn-lg" onclick="loginRedirect()">Sing in</button>
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only ">Next</span>
+            </a>
         </div>
+    </div>
     </div>
     <!--- Two-column body -->
     <!--- First column body -->
     <div class="container-1">
         <div class="maintext row">
             <div class="maintext-img">
-                <img class="maintext-img__picture col-xs-6 col-sm-10 col-md-18 col-lg-16 col-xl-11" src="default.png">
+                <div id="carouselExampleControls" class="carousel" data-interval="false">
+                    <div class="carousel-inners">
+                        <div class="carousel-item active">
+                            <img class="maintext-img__picture" src="default.png">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="maintext-img__picture" src="default2.png">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="maintext-img__picture" src="default3.png">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev carousel-default1" href="#carouselExampleControls" data-slide="prev">
+                        <span class="carousel-control-prev-icon carousel-default-icon1" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next carousel-default2" href="#carouselExampleControls" data-slide="next">
+                        <span class="carousel-control-next-icon carousel-default-icon2" aria-hidden="true"></span>
+                    </a>
+                </div>
             </div>
             <!--- Second column body -->
-            <div class="maintext-head col-xs-6 col-sm-10 col-md-14 col-lg-20 col-xl-5">
+            <div class="maintext-head">
                 <div class="row  maintext-head__head">
                     <a>AVE CLASSIC SWEATSHIRT</a>
                 </div>
@@ -97,11 +118,13 @@
                 <div class="maintext-head__three">
                     <a class="row"><strong>AVAILABILITY:</strong>&nbsp In stock</a>
                     <a class="row"><strong>PRODUCT CODE:</strong> &nbsp #26347859</a>
-                    <a class="row"><strong>TAGS: &nbsp <span>Classic, Casual, V-neck, Loose</span></strong></a>
+                    <a class="row"><strong>TAGS: &nbsp </strong><span>Classic, Casual, V-neck, Loose</span></a>
                 </div>
                 <div class="maintext-head__text">
-                    <a class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</a>
-                    <ul class="list-group_elements">
+                    <div class="maintext-head__text1">
+                        <a class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</a>
+                    </div>
+                    <ul class="maintext-head__text2 list-group_elements">
                         <il class="list-group-item row">Elasticated cuffs</il>
                         <il class="list-group-item row">Casual fit</il>
                         <il class="list-group-item row">100% Cotton</il>
@@ -110,40 +133,46 @@
                 </div>
                 <div class="maintext-head-chose">
                     <div class="maintext-head-chose__chose d-flex">
-                        <a class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-xs-2">COLOR</a>
-                        <a class="col-xl-5 col-lg-3 col-md-3 col-sm-3 col-xs-2">SIZE</a>
-                        <a class="col-xl col-lg-2 col-md-2 col-sm-2 col-xs-2">QTY</a>
+                        <a class="maintext-head-chose__chose1">COLOR</a>
+                        <a class="maintext-head-chose__chose2">SIZE</a>
+                        <a class="maintext-head-chose__chose3">QTY</a>
                     </div>
                     <div class="maintext-head-chose__options d-flex">
-                        <select class="col-xl-4 col-lg-3 col-md-3 col-sm-3 col-xs-2 maintext-head-chose-color custom-select">
-                            <option selected>Select color</option>
+                        <select class="maintext-head-chose-color custom-select">
+                            <option value="" disabled selected hidden>Select colors</option>
                             <option value="1">Black</option>
                             <option value="2">White</option>
                             <option value="3">Gray</option>
                         </select>
-                        <select class="col-xl-4 col-lg-3 col-md-3 col-sm-3 col-xs-2 maintext-head-chose-size custom-select">
-                            <option selected>Select size</option>
+                        <select class="maintext-head-chose-size custom-select">
+                            <option value="" disabled selected hidden>Select size</option>
                             <option value="1">S</option>
                             <option value="2">M</option>
                             <option value="3">L</option>
                         </select>
-                        <select class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-1 maintext-head-chose-qty custom-select">
-                            <option selected>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <div class="maintext-head-chose-counter input-group inline-group">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary btn-minus">
+                                <i class="fa fa-minus"></i>
+                              </button>
+                            </div>
+                            <input class="form-control quantity" min="0" max="99" name="quantity" value="1" type="number">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary btn-plus">
+                                <i class="fa fa-plus"></i>
+                              </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row maintext-head-buttons">
-                    <button type="button" class="maintext-head-buttons__btn-1 btn btn-lg btn-outline-dark"><i class="fas fa-shopping-cart"></i> &nbsp ADD TO CART</button>
-                    <button type="button" class="maintext-head-buttons__btn-2 btn btn-lg btn-outline-dark"><i class="far fa-heart"></i> ADD TO LOOKBOOT</button>
+                <div class="maintext-head-buttons">
+                    <button type="button" class="maintext-head-buttons__btn-1 btn btn-outline-dark"><i class="fas fa-shopping-cart"></i> &nbsp ADD TO CART</button>
+                    <button type="button" class="maintext-head-buttons__btn-2 btn btn-outline-dark"><i class="far fa-heart"></i> ADD TO LOOKBOOT</button>
                 </div>
             </div>
         </div>
         <!--- Five tabs -->
-        <div class="container container-tabs">
+        <div class="containertabs container-tabs">
             <div class="tabs">
                 <ul class="tabs-list nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="tabs-list-element nav-item">
@@ -187,43 +216,43 @@
                 <div class="panel-footer-general row">
                     <div class="panel-footer-general-column col-md-2">
                         <h6>INFORMATION</h6>
-                        <p>The brand</p>
-                        <p>Local stores</p>
-                        <p>Customer Service</p>
-                        <p>Privacy & Cookies</p>
-                        <p>Site map</p>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">The brand</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Local stores</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Customer Service</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Privacy & Cookies</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Site map</a>
                     </div>
                     <div class="panel-footer-general-column col-md-2">
                         <h6>WHY BUY FROM US</h6>
-                        <p>Shipping & returns</p>
-                        <p>Secure shopping</p>
-                        <p>Testimonials</p>
-                        <p>Award winning</p>
-                        <p>Ethical tranding</p>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Shipping & returns</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Secure shopping</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Award winning</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Ethical tranding</a>
                     </div>
                     <div class="panel-footer-general-column col-md-2">
                         <h6>YOUR ACCOUNT</h6>
-                        <p>Sing in</p>
-                        <p>Register</p>
-                        <p>View cart</p>
-                        <p>View your lookbook</p>
-                        <p>Track in order</p>
-                        <p>Update information</p>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab" onclick="loginRedirect()">Sing in</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab" onclick="createRedirect()">Register</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">View cart</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">View your lookbook</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Track in order</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Update information</a>
                     </div>
                     <div class="panel-footer-general-column col-md-2">
                         <h6>LOOKBOOK</h6>
-                        <p>Latests posts</p>
-                        <p>Men's lookbooks</p>
-                        <p>Women's lookbooks</p>
-                        <p>Lookbooks RSS feed</p>
-                        <p>View your lookbook</p>
-                        <p>Delete your lookbook</p>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Latests posts</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Men's lookbooks</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Women's lookbooks</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Lookbooks RSS feed</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">View your lookbook</a>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab">Delete your lookbook</a>
                     </div>
                     <div class="panel-footer-general-column col-md-2">
                         <h6>CONTACT DETAILS</h6>
-                        <p>Head Office Avenue Fashion 5, 45</p>
-                        <p>Phone: +32952434324</p>
-                        <p>Mail: support@gmail.com</p>
+                        <a class="nav-link lower-links" data-toggle="pill" href="#share" role="tab" id="hoverMe" onclick="mapRedirect()">Head Office Avenue Fashion 5, 45</a>
+                        <iframe id="tooltip" src="simplemap.html"></iframe>
+                        <a class="nav-link lower-links" href="tel:+496170961709">Phone: +496170961709</a>
+                        <a class="nav-link lower-links" href="mailto:support@gmail.com">Mail: support@gmail.com</a>
                     </div>
                 </div>
                 <div class="bigsquars text-center">
@@ -244,7 +273,7 @@
                 </div>
                 <div class="last row text-center">
                     <div class="col-6 last-award">
-                        <p>© 2020 Avenue Fashion™</p>
+                        <p>© 2021 Avenue Fashion™</p>
                     </div>
                     <div class="col-6 last-author">
                         <p>Designed by Dmytro Suprun</p>
@@ -255,10 +284,8 @@
     </footer>
     <script src="https://kit.fontawesome.com/ea5e692342.js " crossorigin="anonymous "></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/ulg/popper.min.js "></script>
+    <script src="script.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
-    <script>
-    </script>
 </body>
 
 </html>

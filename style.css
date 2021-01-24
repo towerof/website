@@ -43,6 +43,10 @@ body {
     transform: translateY(-50%);
 }
 
+.carousel-heading2 {
+    white-space: nowrap;
+}
+
 .carousel-caption span {
     color: cyan;
 }
@@ -74,7 +78,133 @@ body {
 
 .carousel-caption button:hover {
     background-color: rgb(118, 255, 255);
-    border: 2px solid rgb(4, 0, 108);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 5rem;
+    height: 7rem;
+    background-size: 150% 150%;
+}
+
+.carousel-control-next-icon {
+    background-image: url(angle-right-solid.svg);
+    background-color: rgb(161, 161, 161);
+}
+
+.carousel-control-prev-icon {
+    background-image: url(angle-left-solid.svg);
+    background-color: rgb(161, 161, 161);
+}
+
+.carousel-default-icon1 {
+    background-color: unset;
+    width: 5rem;
+    height: 2.5rem;
+    background-size: 150% 150%;
+    color: rgb(166, 255, 246)
+}
+
+.carousel-default-icon2 {
+    background-color: unset;
+    width: 5rem;
+    height: 2.5rem;
+    background-size: 150% 150%;
+}
+
+.containertabs {
+    width: 100%;
+    padding-left: 19rem;
+    padding-right: 18rem;
+}
+
+.container {
+    height: 40rem;
+    width: 30rem;
+    align-items: center;
+}
+
+.containerlog {
+    height: 30rem;
+    width: 30rem;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-inputs,
+.containerlog-inputs {
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 8%;
+    box-shadow: 9px 9px 9px rgb(220, 220, 220);
+    margin-top: 6rem;
+}
+
+.container-inputs-text2 {
+    font-weight: 400;
+    font-size: 2.3rem;
+    text-align: center;
+    white-space: nowrap;
+    padding-top: 1.5rem;
+}
+
+.containerlog-inputs-text {
+    font-weight: 400;
+    font-size: 2.3rem;
+    text-align: center;
+    white-space: nowrap;
+    padding-top: 1.5rem;
+}
+
+.container-inputs-pass,
+.container-inputs-name,
+.container-inputs-date,
+.container-inputs-login,
+.containerlog-inputs-pass,
+.containerlog-inputs-login {
+    width: 20rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 4rem;
+}
+
+.container-inputs-button,
+.containerlog-inputs-button {
+    margin-top: 2rem;
+    margin-left: 11rem;
+    width: 7rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.maintext-head-buttons {
+    white-space: nowrap;
+    width: 29rem;
+}
+
+#map {
+    height: 400px;
+    margin: 0% 20%;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+#tooltip {
+    border: 2px solid rgb(166, 255, 246);
+    display: none;
+}
+
+.body-text__map p {
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    text-align: center;
 }
 
 .maintext {
@@ -84,7 +214,14 @@ body {
 }
 
 .maintext-img__picture {
-    padding-right: 5%;
+    width: 36rem;
+    height: 43.5rem;
+    margin-right: 1.5rem;
+    padding-right: 3%
+}
+
+.maintext-head {
+    width: 29rem;
 }
 
 .maintext-head__head a {
@@ -146,11 +283,7 @@ body {
 }
 
 .maintext-head__three {
-    margin-bottom: 10% !important;
-}
-
-.maintext-head__three span {
-    color: rgb(50, 219, 219);
+    margin-bottom: 5% !important;
 }
 
 .maintext-head__three a {
@@ -171,22 +304,72 @@ body {
     margin-bottom: 10% !important;
 }
 
+.maintext-head-chose__chose1 {
+    padding-left: 3rem;
+    padding-right: 10rem;
+}
+
+.maintext-head-chose__chose2 {
+    padding-right: 7rem;
+}
+
 .maintext-head-chose-color {
-    margin-right: 10%;
+    margin-right: 6%;
+    width: 12rem;
 }
 
 .maintext-head-chose-size {
-    margin-right: 9%;
+    margin-right: 6%;
+    width: 12rem;
+}
+
+.maintext-head-chose-counter {
+    width: 6rem;
+}
+
+.inline-group {
+    max-width: 9rem;
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+.btn-minus {
+    padding: 0rem 0.25rem
+}
+
+.btn-plus {
+    padding: 0rem 0.25rem
+}
+
+.inline-group .form-control {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.form-control {
+    padding: 0.375rem .55rem;
+}
+
+.form-control[type="number"]::-webkit-inner-spin-button,
+.form-control[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inline-group button {
+    padding: 0rem 0.195rem;
 }
 
 .maintext-head-buttons__btn-1 {
     margin-right: 6%;
     width: 40%;
+    height: 4rem;
 }
 
 .maintext-head-buttons__btn-2 {
     margin-right: 3%;
     width: 51%;
+    height: 4rem;
 }
 
 .tabs {
@@ -223,6 +406,11 @@ body {
     margin-bottom: 8%;
 }
 
+.lower-links {
+    padding: 0.6rem 0rem;
+    color: black;
+}
+
 .bigsquars {
     margin-top: 6.25rem;
     margin-left: 21.25rem;
@@ -240,6 +428,7 @@ body {
     width: 28.563rem;
     height: 6.5rem;
     margin-right: 3rem;
+    border-radius: 0.6rem;
 }
 
 .lowericons {
@@ -247,6 +436,7 @@ body {
     color: white;
     width: 28.563rem;
     height: 6.5rem;
+    border-radius: 0.6rem;
 }
 
 .lowericons-div {
@@ -292,6 +482,10 @@ body {
         margin-left: 5%;
         margin-right: 5%;
     }
+    .maintext-img__picture {
+        width: 40rem;
+        height: 46rem;
+    }
     .award {
         width: 19rem;
         height: 4.6rem;
@@ -299,6 +493,11 @@ body {
     }
     .award-first {
         padding-top: 0.9rem;
+    }
+    .containertabs {
+        width: 100%;
+        padding-left: 6rem;
+        padding-right: 27rem;
     }
     .lowericons {
         width: 19rem;
@@ -323,9 +522,6 @@ body {
         margin-left: 3%;
         margin-right: 3%;
     }
-    .maintext-img__picture {
-        padding-right: 3%;
-    }
     .maintext-head-buttons__btn-1 {
         margin-right: 3%;
         width: 43%;
@@ -338,6 +534,10 @@ body {
     }
     .panel-footer-general-column h6 {
         font-size: 0.9rem;
+    }
+    .containertabs {
+        padding-left: 3rem;
+        padding-right: 12rem;
     }
     .last {
         font-size: 0.8rem;
@@ -382,20 +582,26 @@ body {
     }
 }
 
-
-/* @media (max-width: 1281px) {
-    .lowericons a {
-        padding-top: 6%;
-        padding-bottom: 6%;
-    }
-} */
-
 @media (max-width: 1200px) {
     .navbar-brand {
         font-size: 1rem;
     }
     .carousel-caption h1 {
         font-size: 4rem;
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        width: 3rem;
+        height: 4rem;
+    }
+    .maintext-head {
+        width: 50rem;
+        margin: auto;
+    }
+    .container-1 {
+        margin-left: 9rem;
+        margin-right: 9rem;
+        font-size: 0.8rem;
     }
     .carousel-caption h2 {
         font-size: 1.4rem;
@@ -415,20 +621,23 @@ body {
         width: 100%;
         height: 300px;
     }
-    .container-1 {
-        margin-left: 16%;
-        margin-right: 16%;
-        font-size: 0.75rem;
+    .maintext-head-chose__chose1 {
+        padding-left: 5rem;
+        padding-right: 11rem;
+    }
+    .maintext-head-chose__chose2 {
+        padding-right: 9rem;
     }
     .maintext-img__picture {
         margin-left: 5%;
         margin-bottom: 4%;
     }
+    .containertabs {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
     .tabs {
         margin-top: 9% !important;
-    }
-    .maintext-head {
-        margin: auto;
     }
     .maintext-head__head a {
         padding-left: 27%;
@@ -464,6 +673,10 @@ body {
     .maintext-head__icons {
         margin-left: 2%;
     }
+    .maintext-img__picture {
+        width: 28rem;
+        height: 33rem;
+    }
     .maintext-head__share {
         padding-right: 0.8rem;
     }
@@ -482,6 +695,12 @@ body {
     .maintext-head__facebook {
         padding-left: 2%;
     }
+    .maintext-head-buttons__btn-1 {
+        height: 3rem;
+    }
+    .maintext-head-buttons__btn-2 {
+        height: 3rem;
+    }
     .btn-group-lg>.btn,
     .btn-lg {
         font-size: 0.8rem;
@@ -491,6 +710,24 @@ body {
     }
     .maintext-head-chose-size {
         margin-right: 4%;
+    }
+    .maintext-head-chose__chose1 {
+        padding-left: 2.5rem;
+        padding-right: 6.5rem;
+    }
+    .maintext-head-chose__chose2 {
+        padding-right: 5rem;
+    }
+    .maintext-head-chose-color {
+        margin-right: 2%;
+        width: 8rem;
+    }
+    .maintext-head-chose-size {
+        margin-right: 2%;
+        width: 7rem;
+    }
+    .maintext-head-chose-counter {
+        width: 5rem;
     }
     .carousel-caption h1 {
         font-size: 2rem;
@@ -536,6 +773,12 @@ body {
         margin-right: 5%;
         font-size: 0.6rem;
     }
+    .panel-footer-general {
+        margin-left: 11%;
+    }
+    .container-fluid {
+        padding-left: 0px;
+    }
     .navbar-brand {
         font-size: 0.7rem;
     }
@@ -555,11 +798,58 @@ body {
     .btn-lg {
         font-size: 0.7rem;
     }
+    .container {
+        height: 32rem;
+        width: 25rem;
+    }
+    .containerlog {
+        height: 24.5rem;
+        width: 21rem;
+    }
+    .container-inputs,
+    .containerlog-inputs {
+        margin-top: 4rem;
+    }
+    .container-inputs-text2 {
+        font-size: 1.9rem;
+    }
+    .container-inputs-text,
+    .containerlog-inputs-text {
+        font-size: 2.3rem;
+        padding-top: 1.5rem;
+    }
+    .container-inputs-pass,
+    .container-inputs-name,
+    .container-inputs-date,
+    .container-inputs-login {
+        margin-left: 1.6rem;
+        height: 3rem;
+    }
+    .containerlog-inputs-pass,
+    .containerlog-inputs-login {
+        margin-left: 1.6rem;
+        height: 3rem;
+        width: 16rem;
+    }
+    .container-inputs-button,
+    .containerlog-inputs-button {
+        margin-top: 2rem;
+        margin-left: 8.75rem;
+        width: 6rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    .containerlog-inputs-button {
+        margin-left: 6.75rem;
+    }
     .maintext-head-buttons__btn-1 {
         margin-right: 2%;
+        height: 2.5rem;
     }
     .maintext-head-buttons__btn-2 {
         margin-right: 0%;
+        height: 2.5rem;
     }
     .maintext-head-chose-color {
         margin-right: 2%;
@@ -567,8 +857,27 @@ body {
     .maintext-head-chose-size {
         margin-right: 2%;
     }
+    .maintext-head-chose__chose2 {
+        padding-right: 6rem;
+    }
+    .body-text__map p {
+        margin-top: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    #map {
+        margin: 0% 10%;
+        margin-bottom: 3%;
+    }
+    .form-control {
+        padding: 0.18rem .55rem;
+    }
     .custom-select {
         height: 1.7rem
+    }
+    .container-tabs {
+        margin-left: 0rem;
+        margin-right: 0rem;
     }
     .panel-footer-general-column h6 {
         font-size: 0.6rem;
@@ -582,24 +891,56 @@ body {
 
 @media (max-width: 576px) {
     .container-1 {
-        margin-left: 2%;
-        margin-right: 2%;
-        font-size: 0.5rem;
+        width: 21rem;
+    }
+    .maintext-head {
+        width: 21rem;
+    }
+    .maintext-head-buttons {
+        width: 100%;
+    }
+    .maintext-head__text1 {
+        max-width: 21rem;
     }
     .maintext-img__picture {
+        width: 18rem;
+        height: 23rem;
         margin-left: 0%;
         margin-bottom: 4%;
+        margin-right: 0%;
+        padding-right: 0%;
     }
     .btn-group-lg>.btn,
     .btn-lg {
         font-size: 0.5rem;
     }
     .maintext-head-buttons__btn-1 {
+        font-size: 0.55rem;
         margin-right: 2%;
-        width: 27%;
+        width: 24%;
+        height: 2.5rem;
+        padding: unset;
     }
     .maintext-head-buttons__btn-2 {
-        width: 30%;
+        font-size: 0.55rem;
+        width: 29%;
+        height: 2.5rem;
+        padding: unset;
+    }
+    .maintext-head__text1 {
+        width: 25rem;
+    }
+    .carousel-caption button {
+        border: 2px solid rgb(4, 0, 108);
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    .carousel-default-icon1,
+    .carousel-default-icon2 {
+        height: 3rem;
     }
     .panel-footer-general-column h6 {
         font-size: 0.5rem;
@@ -650,9 +991,82 @@ body {
 }
 
 @media (max-width: 400px) {
+    .navbar {
+        padding-top: 0.3rem;
+        padding-right: 0.6rem;
+        padding-bottom: 0.3rem;
+        padding-left: 0.6rem;
+    }
+    .maintext {
+        margin-left: 0.75rem;
+        margin-right: 0%;
+    }
+    .container-1 {
+        margin-left: 0.75rem;
+        margin-right: 0%;
+        font-size: 0.5rem;
+        width: 16.5rem;
+    }
+    .container {
+        height: 19rem;
+        width: 17rem;
+    }
+    .containerlog {
+        height: 14.5rem;
+        width: 17rem;
+    }
+    .maintext-head-buttons__btn-1,
+    .maintext-head-buttons__btn-2 {
+        font-size: 0.5rem;
+    }
+    .container-inputs,
+    .containerlog-inputs {
+        margin-top: 2rem;
+        box-shadow: none;
+    }
+    .container-inputs-text2 {
+        font-size: 1.2rem;
+        padding-top: 0.5rem;
+    }
+    .containerlog-inputs-text {
+        font-size: 1.3rem;
+        padding-top: 1rem;
+    }
+    .container-inputs-pass,
+    .container-inputs-name,
+    .container-inputs-date,
+    .container-inputs-login,
+    .containerlog-inputs-login,
+    .containerlog-inputs-pass {
+        margin-left: 1.5rem;
+        height: 1.85rem;
+        width: 12rem;
+        font-size: 0.8rem;
+        margin-top: 0.75rem;
+        border-width: 0.75px;
+    }
+    .container-inputs-button,
+    .containerlog-inputs-button {
+        margin-top: .75rem;
+        margin-left: 5.25rem;
+        width: 5rem;
+        height: 2rem;
+        font-size: .9rem;
+        margin-bottom: 1rem;
+    }
+    .maintext-head {
+        width: 16.5rem;
+    }
     .carousel-inner img {
         width: 100%;
         height: 150px;
+    }
+    .maintext-img {
+        width: 14.5rem;
+    }
+    .maintext-img__picture {
+        width: 14rem;
+        height: 18rem;
     }
     .carousel-caption {
         padding-bottom: 35%;
@@ -669,6 +1083,47 @@ body {
     .panel-footer-general-column h6 {
         font-size: 0.5rem;
     }
+    .maintext-head__text1 {
+        max-width: 16rem;
+    }
+    .maintext-head-chose-color {
+        margin-right: 2%;
+        width: 5.8rem;
+    }
+    .body-text__map p {
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+    }
+    #map {
+        height: 300px;
+        margin: 0% 5%;
+        margin-bottom: 3%;
+    }
+    .maintext-head-chose-size {
+        margin-right: 2%;
+        width: 5.2rem;
+    }
+    .inline-group .form-control {
+        text-align: center;
+        font-size: 0.6rem;
+    }
+    .form-control {
+        padding: 0.0rem 0.25rem;
+    }
+    .maintext-head-chose__chose1 {
+        padding-left: 2rem;
+        padding-right: 4.5rem;
+    }
+    .maintext-head-chose__chose2 {
+        padding-right: 4.3rem;
+    }
+    .maintext-head-buttons__btn-1 {
+        width: 32%;
+    }
+    .maintext-head-buttons__btn-2 {
+        width: 38%;
+    }
     .panel-footer-general {
         font-size: 0.4rem;
     }
@@ -682,6 +1137,22 @@ body {
         margin-bottom: 1rem;
         margin-left: 3.6rem;
         margin-right: auto;
+    }
+    .navbar-nav-search {
+        font-size: 0.55rem;
+        background-size: 9%;
+    }
+    .carousel-inner-join {
+        -webkit-text-stroke-width: 0.3px;
+    }
+    .carousel-inner-already {
+        -webkit-text-stroke-width: 0px;
+    }
+}
+
+@media (max-width: 300px) {
+    .maintext-head {
+        width: 15rem;
     }
 }
 
